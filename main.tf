@@ -2,7 +2,8 @@ module "host_project" {
   source  = "terraform-google-modules/project-factory/google"
   version = "~> 10.2"
 
-  name                           = "${var.project_prefix}-hp-1"
+  name                           = "${var.project_prefix}-hp"
+  random_project_id              = true
   org_id                         = var.org_id
   billing_account                = var.billing_account
   enable_shared_vpc_host_project = true
@@ -58,9 +59,10 @@ module "service_project" {
   source  = "terraform-google-modules/project-factory/google"
   version = "~> 10.2"
 
-  name            = "${var.project_prefix}-sp-1"
-  org_id          = var.org_id
-  billing_account = var.billing_account
+  name              = "${var.project_prefix}-sp"
+  random_project_id = true
+  org_id            = var.org_id
+  billing_account   = var.billing_account
 
   activate_apis = [
     "compute.googleapis.com",
@@ -68,5 +70,5 @@ module "service_project" {
   ]
 
   svpc_host_project_id = module.host_project.project_id
-  shared_vpc_subnets = module.vpc.subnets_self_links
+  shared_vpc_subnets   = module.vpc.subnets_self_links
 }
