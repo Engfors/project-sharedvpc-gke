@@ -4,7 +4,6 @@ To use this example you'll first have create the host project and VPC using `ter
 
 Once the run completes, run `terraform apply` to create the service project.
 ## Requirements
-`
 | Name        | Version   |
 | ----------- | --------- |
 | terraform   | ~> 0.14   |
