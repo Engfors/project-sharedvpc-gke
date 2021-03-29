@@ -10,5 +10,5 @@ variable "org_id" {
 
 variable "project_prefix" {
   type        = string
-  description = "Prefix used by the projects to make them unique"
+  description = "Prefix used by the projects to personalize their names"
 }
