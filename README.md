@@ -34,7 +34,7 @@ No resources.
 | ---------------- | ----------------------------------------------- | -------- | ------- | :------: |
 | billing\_account | Billing Account use by the projects             | `string` | n/a     |   yes    |
 | org\_id          | Organization id use by the projects             | `string` | n/a     |   yes    |
-| project\_prefix  | Prefix used by the projects to make them unique | `string` | n/a     |   yes    |
+| project\_prefix  | Prefix used by the projects to personalize their names | `string` | n/a     |   yes    |
 
 ## Outputs
 
